@@ -1,0 +1,107 @@
+body {
+  font-family: "MADE Outer Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.heading {
+  font-weight: 100;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.cdGrid {
+  display: grid;
+  grid-template-columns: 30% 20% auto;
+  gap: 20px;
+  text-align: justify;
+}
+
+.creative-direction-container {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.project {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.line {
+  border: 0.5px solid rgb(0, 0, 0);
+}
+
+.sideNav-content {
+  width: 90%;
+  text-align: justify;
+}
+
+.credits-div {
+  position: relative;
+}
+
+.credits {
+  font-size: 8px;
+  text-align: right;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.content {
+  width: 100%;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .creative-direction-container {
+    padding: 10px;
+  }
+
+  .photo-grid,
+  .photo-grid-vertical {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .credits {
+    position: static;
+    margin-top: 100px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .cdGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

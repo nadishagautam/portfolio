@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'MADE Outer Sans';
+    src: url('./MADE-Outer-Sans-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'MADE Outer Sans';
+    src: url('./MADE-Outer-Sans-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'MADE Outer Sans';
+    src: url('./MADE-Outer-Sans-Bold.otf') format('opentype');
+    font-weight: 700;
+}

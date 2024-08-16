@@ -1,0 +1,35 @@
+.graphic-design-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color: aquamarine;
+}
+
+.designColumn {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.designColumn img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .graphic-design-container {
+    flex-direction: column;
+  }
+
+  .designColumn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
