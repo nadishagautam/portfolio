@@ -10,6 +10,10 @@
   margin-top: 10px;
 }
 
+.project-summary{
+  text-align: justify;
+}
+
 .tech {
   padding-top: 5px;
   padding-bottom: 5px;
