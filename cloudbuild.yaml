@@ -1,0 +1,12 @@
+steps:
+# Build the Docker image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/true-tooling-432601-s4/portfolio:latest', '.']
+
+# Push the Docker image to Google Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/true-tooling-432601-s4/portfolio:latest']
+
+# Deploy the Docker image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: ['gcloud', 'run', 'deploy', 'portfolio', '--image', 'gcr.io/true-tooling-432601-s4/portfolio:latest', '--region', 'northamerica-northeast2', '--platform', 'managed', '--allow-unauthenticated']
