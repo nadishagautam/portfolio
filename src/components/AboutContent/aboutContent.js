@@ -62,7 +62,7 @@ const AboutContent = () => {
 
             <div className="socials">
               <a href="mailto:nadishagautam@gmail.com">EMAIL →</a>
-              <a href="https://www.linkedin.com/in/nadishagautam">LINKEDIN →</a>
+              <a href="https://www.linkedin.com/in/nadisha-gautam/">LINKEDIN →</a>
               <a href="https://github.com/nadishagautam">GITHUB →</a>
             </div>
           </div>
