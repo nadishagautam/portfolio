@@ -5,6 +5,7 @@
   justify-content: center;
   height: calc(100vh - 4rem);
   color: white;
+  position: relative; 
 }
 
 .nadisha-gif {
@@ -15,4 +16,15 @@
   height: auto;
   max-height: 30rem;
   object-fit: cover;
+}
+
+@media (max-width: 600px) {
+
+  .nadisha-gif {
+    position: static; 
+    left: auto; 
+    width: 80%; 
+    max-height: none; 
+    height: auto; 
+  }
 }
