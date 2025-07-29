@@ -1,112 +1,132 @@
 import "./softwareContent.css";
 
+const Project = ({ title, description, technologies }) => (
+  <div className="project">
+    <p className="heading">{title}</p>
+    <hr className="line" />
+    <div className="row">
+      <div className="grid">
+        <div className="empty" />
+        <div className="project-summary">{description}</div>
+
+        <div className="heading2">TECHNOLOGIES USED</div>
+        <div className="project-summary">
+          <div className="tech-container">
+            {technologies.map((tech, idx) => (
+              <div key={idx} className={`tech ${tech.highlight ? "pink" : ""}`}>
+                {tech.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const SoftwareContent = () => {
   return (
     <div className="creative-direction-container">
-      <div className="project">
-        <p className="heading">House Price Predictor</p>
-        <hr className="line"></hr>
-        <div className="row">
-          <div className="grid">
-            <div className="empty"> </div>
-            <div className="project-summary">
-              I implemented AWS Linear Learner Regression with data
-              preprocessing for predicting house prices. With hyperparameter
-              tuning, I significantly improved the model's performance by 15%,
-              ensuring the model's optimal adaptability to diverse datasets. I
-              also constructed a comprehensive web interface using AWS Cloud9
-              and Flask. This interface transmits user inputs to the SageMaker
-              endpoint, facilitating real-time model predictions. Users can
-              enter various parameters related to house prices and instantly
-              receive predictions. This tool empowers users, particularly in the
-              real estate market, by enabling informed decision-making based on
-              accurate and up-to-date data.
-            </div>
-            
-            <div className="heading2"> TECHNOLOGIES USED</div>
-            <div className="project-summary">
-              <div className="tech-container">
-                <div className="tech"> Python</div>
-                <div className="tech"> AWS SageMaker</div>
-                <div className="tech pink"> Pandas</div>
-                <div className="tech"> NumPy</div>
-                <div className="tech"> AWS SageMaker Tuning Jobs</div>
-                <div className="tech"> Flask</div>
-                <div className="tech"> AWS Cloud9</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="HeartBeats"
+        description={
+          <>
+            HeartBeats is a song intensity classification tool that uses Spotify
+            audio features to recommend music based on listener activity. After
+            preprocessing and standardizing attributes like tempo, energy,
+            loudness, and valence, songs are clustered into low, medium, or high
+            intensity using KMeans. A neural network, trained with ReLU and
+            softmax layers, classifies songs and is evaluated through accuracy
+            metrics and a confusion matrix. The system enables real-time
+            predictions and links intensity levels to heart rate ranges,
+            aligning music with the listener’s physical state.
+          </>
+        }
+        technologies={[
+          { name: "Python" },
+          { name: "Pandas" },
+          { name: "scikit-learn" },
+          {
+            name: "Neural Networks with ReLU and Softmax activations",
+            highlight: true,
+          },
+          { name: "He Initialization" },
+        ]}
+      />
 
-      <div className="project">
-        <p className="heading">Sentiment Analysis on Public Outrage</p>
-        <hr className="line"></hr>
-        <div className="row">
-          <div className="grid">
-          <div className="empty"> </div>
-            <div className="project-summary">
-              The project involves developing a Python program that analyzes
-              public outrage events on Reddit using natural language processing
-              (NLP) techniques. By accessing comments related to contentious
-              topics via the Reddit API, the program cleans and filters the
-              data, achieving a 95% accuracy in removing irrelevant and toxic
-              content. Advanced NLP methods such as tokenization, TF-IDF, and
-              topic modeling are applied to extract significant themes and
-              recurring issues from the comments. This analysis provides
-              organizations with deeper insights into public sentiment, enabling
-              them to craft more effective responses or apologies by addressing
-              the core concerns and points of outrage identified in the data.
-              This project was presented at the Canadian Undergraduate AI
-              Conference, showcasing its relevance and impact in understanding
-              and responding to public sentiment.
-            </div>
+      <Project
+        title="House Price Predictor"
+        description={
+          <>
+            The House Price Predictor utilizes AWS Linear Learner Regression
+            with comprehensive data preprocessing to estimate house prices.
+            Through effective hyperparameter tuning, the model's performance
+            improved by 15%, enhancing its adaptability across diverse datasets.
+            A web interface - built using AWS Cloud9 and Flask - connects to a
+            SageMaker endpoint, enabling real-time predictions. Users can input
+            various housing parameters and receive immediate price estimates,
+            supporting informed decision-making within the real estate market.
+          </>
+        }
+        technologies={[
+          { name: "Python" },
+          { name: "AWS SageMaker" },
+          { name: "Pandas", highlight: true },
+          { name: "NumPy" },
+          { name: "AWS SageMaker Tuning Jobs" },
+          { name: "Flask" },
+          { name: "AWS Cloud9" },
+        ]}
+      />
 
-            <div className="heading2"> TECHNOLOGIES USED</div>
-            <div className="project-summary">
-              <div className="tech-container">
-                <div className="tech"> Python</div>
-                <div className="tech pink"> NLTK</div>
-                <div className="tech"> spaCy</div>
-                <div className="tech pink"> Scikit-learn</div>
-                <div className="tech"> Reddit APIs</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="Sentiment Analysis on Public Outrage"
+        description={
+          <>
+            The Public Outrage Sentiment Analysis Tool is a Python-based system
+            that investigates public outrage on Reddit using advanced NLP
+            techniques. It collects user comments via the Reddit API and
+            preprocesses the data—filtering noise and toxic language with 95%
+            accuracy. The cleaned data is then analyzed through tokenization,
+            TF-IDF, and topic modeling to identify key themes and recurring
+            concerns. This analysis helps organizations better understand public
+            sentiment and craft targeted responses addressing core issues. The
+            project was presented at the Canadian Undergraduate AI Conference,
+            highlighting its academic and practical impact in social media
+            analysis and crisis communication.
+          </>
+        }
+        technologies={[
+          { name: "Python" },
+          { name: "NLTK", highlight: true },
+          { name: "spaCy" },
+          { name: "scikit-learn", highlight: true },
+          { name: "Reddit APIs" },
+        ]}
+      />
 
-      <div className="project">
-        <p className="heading">Torvan Medical Auto Sink</p>
-        <hr className="line"></hr>
-        <div className="row">
-          <div className="grid">
-          <div className="empty"> </div>
-          <div className="project-summary">
-              I contributed to the development of a new medical Auto Sink
-              device, collaborating closely with Torvan Medical’s engineering
-              team. My responsibilities included designing a user interface with
-              over 40 screens using QML and Figma. For the backend, I engineered
-              robust logic using C++ and SQL to handle data storage efficiently,
-              and integrated the system with hardware components via CANopen,
-              ensuring smooth operation and reliable communication. To manage
-              different software states and transitions, I implemented a state
-              design pattern, which enhanced the reliability of the system.
-            </div>
-
-            <div className="heading2"> TECHNOLOGIES USED</div>
-            <div className="project-summary">
-              <div className="tech-container">
-                <div className="tech pink"> QML</div>
-                <div className="tech"> Figma</div>
-                <div className="tech"> C++</div>
-                <div className="tech"> SQL</div>
-                <div className="tech"> CANopen</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Project
+        title="Torvan Medical AutoSink"
+        description={
+          <>
+            This project involved developing software for a new medical Auto
+            Sink device in collaboration with Torvan Medical’s engineering team.
+            Key responsibilities included designing a user interface with over
+            40 screens using QML and Figma, engineering backend logic with C++
+            and SQL for efficient data handling, and integrating the system with
+            hardware components via CANopen for seamless communication. A state
+            design pattern was also implemented to manage software states and
+            transitions.
+          </>
+        }
+        technologies={[
+          { name: "QML", highlight: true },
+          { name: "Figma" },
+          { name: "C++" },
+          { name: "SQL" },
+          { name: "CANopen" },
+        ]}
+      />
     </div>
   );
 };

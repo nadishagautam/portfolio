@@ -62,8 +62,12 @@ body {
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.grid-item {
+  width: 100%;
 }
 
 .photo-grid img {
@@ -104,4 +108,8 @@ body {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+}
+
+.span-2 {
+  grid-column: span 2;
 }

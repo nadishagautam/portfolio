@@ -5,7 +5,7 @@
   justify-content: center;
   height: calc(100vh - 4rem);
   color: white;
-  position: relative; 
+  position: relative;
 }
 
 .nadisha-gif {
@@ -19,20 +19,25 @@
 }
 
 @media (max-width: 600px) {
-
   .container {
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .nadisha-gif {
-    position: static; 
-    left: auto; 
-    width: 80%; 
-    max-height: none; 
-    height: auto; 
+    position: static;
+    left: auto;
+    width: 80%;
+    max-height: none;
+    height: auto;
   }
 
   body.landing-page {
     overflow: hidden;
   }
+}
+
+.scroll-track-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }

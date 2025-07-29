@@ -1,217 +1,187 @@
+// src/components/CreativeDirectionContent.jsx
 import "./cdContent.css";
 import React from "react";
-import FadeInSection from "../FadeInSection"; 
-import Will01 from "../../assets/images/Will/MUSE-Will-01.jpg";
-import Will02 from "../../assets/images/Will/MUSE-Will-02.jpg";
-import Will03 from "../../assets/images/Will/MUSE-Will-03.jpg";
-import Will04 from "../../assets/images/Will/MUSE-Will-04.jpg";
-import Will05 from "../../assets/images/Will/MUSE-Will-05.jpg";
-import Will06 from "../../assets/images/Will/MUSE-Will-06.jpg";
-import Framework01 from "../../assets/images/TheFramework/MUSE-Framework-01.jpg";
-import Framework02 from "../../assets/images/TheFramework/MUSE-Framework-02.jpg";
-import Framework03 from "../../assets/images/TheFramework/MUSE-Framework-03.jpg";
-import Framework04 from "../../assets/images/TheFramework/MUSE-Framework-04.jpg";
-import Framework05 from "../../assets/images/TheFramework/MUSE-Framework-05.jpg";
-import Framework06 from "../../assets/images/TheFramework/MUSE-Framework-06.jpg";
-import Her01 from "../../assets/images/Her/MUSE-Her-01.png";
-import Her02 from "../../assets/images/Her/MUSE-Her-02.png";
-import Her03 from "../../assets/images/Her/MUSE-Her-03.png";
-import Her04 from "../../assets/images/Her/MUSE-Her-04.png";
-import Her05 from "../../assets/images/Her/MUSE-Her-05.png";
-import Fluent01 from "../../assets/images/Fluent/MUSE-Fluent-01.JPG";
-import Fluent02 from "../../assets/images/Fluent/MUSE-Fluent-02.JPG";
-import Fluent03 from "../../assets/images/Fluent/MUSE-Fluent-03.JPG";
-import Fluent05 from "../../assets/images/Fluent/MUSE-Fluent-05.JPG";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import PhotoGrid from "../PhotoGrid";
+import {
+  willImages,
+  frameworkImages,
+  herImages,
+  nadishaImages,
+  jinxImages,
+  scottyImages,
+  oldEnoughImages,
+  feelYouImages,
+} from "../photoData";
 
 const CreativeDirectionContent = () => {
   return (
     <div className="creative-direction-container">
-      <div className="project">
-        <p className="heading">This is Will</p>
-        <hr className="line" />
-        <div className="row">
-          <div className="cdGrid">
-            <p>
-              “This is Will” is an editorial for MUSE Magazine that encapsulates
-              Will's journey of self-discovery, pride, and identity. It
-              highlights his defiance against societal norms, the importance of
-              community support in finding comfort with one's identity, and his
-              use of fashion as a tool for expression and confidence.
-            </p>
-            <div className="credits-div">
-              <div className="credits">
-                <p> Creative Director: Nadisha Gautam</p>
-                <p> Photographer: Jade Robinson</p>
-                <p> Make Up Artist: Khush Sagar</p>
-                <p> Model: Will Finlayson</p>
-              </div>
-            </div>
+      {/* NADISHA */}
+      <Project
+        title="NADISHA"
+        description="“Nadisha” is an editorial featured in MUSE Magazine Issue XXX that encapsulates my creative journey over the past four years. It’s a celebration of pushing boundaries, embracing the unconventional, and giving myself permission to get weird."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Videography: Hadleigh Green",
+          "Make Up Artist: Khush Sagar",
+          "Model: Nadisha Gautam",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={nadishaImages}
+        smallScreenImages={[
+          nadishaImages[0],
+          nadishaImages[1],
+          nadishaImages[3],
+          nadishaImages[2],
+          nadishaImages[4],
+        ]}
+      />
 
-            <div className="content">
-              <div className="photo-grid">
-                <FadeInSection>
-                  <LazyLoadImage src={Will01} alt="Will 01" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Will02} alt="Will 02" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Will03} alt="Will 03" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Will04} alt="Will 04" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Will05} alt="Will 05" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Will06} alt="Will 06" />
-                </FadeInSection>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* JINX */}
+      <Project
+        title="JINX"
+        description="“JINX” is an upcoming band I had the privilege of meeting and photographing as they headlined MUSE Magazine's biannual concert, MINI DESK."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Videography: Hadleigh Green",
+          "Make Up Artist: Anika Tasneem",
+          "Band: JINX",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={jinxImages}
+      />
 
-      <div className="project">
-        <p className="heading">The Framework</p>
-        <hr className="line" />
+      {/* MEET SCOTTY */}
+      <Project
+        title="Meet Scotty"
+        description="“Meet Scotty” is an editorial featuring Scott Dias Fordham, an emerging DJ and creative. I had the chance to ask him a few questions about his music and creative process. The shoot reflects his personality both on and off the decks."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Model: Scott Dias Fordham",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={scottyImages}
+      />
 
-        <div className="row">
-          <div className="cdGrid">
-            <p>
-              “The Framework” is an editorial for MUSE Magazine Issue XXVII
-              which explores the importance of individuality, creativity, and
-              identity in a digital world. Despite the significant role
-              technology plays in our lives, creativity and human individuality
-              will always prevail. It explores how technology influences our
-              identities but emphasizes that our unique, creative selves will
-              always shine through.
-            </p>
-            <div className="credits-div">
-              <div className="credits">
-                <p> Creative Director: Nadisha Gautam</p>
-                <p> Photographer: Jade Robinson</p>
-                <p> Videographer: Bronwyn Tyndall </p>
-                <p> Make Up Artist: Khush Sagar</p>
-                <p> Model: Avery Simard</p>
-              </div>
-            </div>
+      {/* Feel You */}
+      <Project
+        title="Feel You"
+        description="“Feel You” is an editorial for MUSE Magazine’s annual Valentine’s Day zine. Part of the trilogy — Meet You, Feel You, and Know You — Feel You captures the euphoric essence of new love."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Models: Camden Szumlansk & Zahara Groenewald",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={feelYouImages}
+        smallScreenImages={[
+          feelYouImages[0],
+          feelYouImages[1],
+          feelYouImages[3],
+          feelYouImages[2],
+          feelYouImages[4],
+        ]}
+      />
 
-            <div className="content">
-              <div className="photo-grid">
-                <FadeInSection>
-                  <LazyLoadImage src={Framework01} alt="Framework 01" effect="blur" />
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Framework02} alt="Framework 02" effect="blur" />
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Framework05} alt="Framework 05" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Framework03} alt="Framework 03" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Framework04} alt="Framework 04" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Framework06} alt="Framework 06" effect="blur"/>
-                </FadeInSection>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* OLD ENOUGH */}
+      <Project
+        title="Old Enough"
+        description="“Old Enough” is an editorial for MUSE Magazine Issue XXIX. Growing up, I always heard the term “how old are you?” when acting “childish” - a question that often defined what we were allowed to do. “Old Enough” challenges that idea, celebrating the energy of childhood, reminding us that living fully has no age limit."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Videography: Hadleigh Green",
+          "Make Up Artist: Anika Tasneem",
+          "Models: Camden Szumlansk, Zoë Mickelson & Kailey Curran",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={oldEnoughImages}
+        smallScreenImages={[
+          oldEnoughImages[0],
+          oldEnoughImages[1],
+          oldEnoughImages[3],
+          oldEnoughImages[2],
+          oldEnoughImages[4],
+        ]}
+      />
 
-      <div className="project">
-        <p className="heading">Her</p>
-        <hr className="line" />
-        <div className="row">
-          <div className="cdGrid">
-            <p>
-              “Her” is an editorial for MUSE Magazine Issue XXVII which
-              reinterprets women engaged in traditional domestic activities with
-              a fantastical twist. By infusing an otherworldly aesthetic, the
-              shoot challenges gender norms, underscoring these roles are not
-              inherently bound to women.
-            </p>
-            <div className="credits-div">
-              <div className="credits">
-                <p> Creative Director: Nadisha Gautam</p>
-                <p> Photographer: Cat Rose</p>
-                <p> Videographer: Bronwyn Tyndall </p>
-                <p> Make Up Artist: Khush Sagar</p>
-                <p> Model: Maya Elliot & Ying Feng</p>
-              </div>
-            </div>
+      {/* THIS IS WILL */}
+      <Project
+        title="This is Will"
+        description="This is Will” is an editorial for MUSE Magazine that encapsulates Will's journey of self-discovery, pride, and identity. It highlights his defiance against societal norms, the importance of community support in finding comfort with one's identity, and his use of fashion as a tool for expression and confidence."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Make Up Artist: Khush Sagar",
+          "Model: Will Finlayson",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={willImages}
+      />
 
-            <div className="content">
-              <div className="photo-grid">
-                <FadeInSection>
-                  <LazyLoadImage src={Her01} alt="Her 01" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Her02} alt="Her 02" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Her03} alt="Her 03" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Her04} alt="Her 04" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Her05} alt="Her 05" effect="blur"/>
-                </FadeInSection>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* THE FRAMEWORK */}
+      <Project
+        title="The Framework"
+        description="““The Framework” is an editorial for MUSE Magazine Issue XXVII which explores the importance of individuality, creativity and identity in a digital world. Despite the significant role technology plays in our lives, creativity and human individuality will always prevail. It explores how technology influences our identities but emphasizes that our unique, creative selves will always shine through."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Jade Robinson",
+          "Videographer: Bronwyn Tyndall",
+          "Make Up Artist: Khush Sagar",
+          "Model: Avery Simard",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={frameworkImages}
+      />
 
-      <div className="project">
-        <p className="heading">Fluent</p>
-        <hr className="line" />
-        <div className="row">
-          <div className="cdGrid">
-            <p>
-              “Fluent” is an editorial for MUSE Magazine that highlights the
-              beauty and fashion heritage of South Asia. The editorial
-              celebrates the mesmerizing tapestry of colors, fabrics, and
-              craftsmanship that defines South Asian fashion.
-            </p>
-            <div className="credits-div">
-              <div className="credits">
-                <p> Creative Director: Nadisha Gautam</p>
-                <p> Photographer: Bronwyn Tyndall</p>
-                <p> Videographer: Bronwyn Tyndall </p>
-                <p> Model: Nadisha Gautam & Aaliyah Mansuri</p>
-              </div>
-            </div>
-
-            <div className="content">
-              <div className="photo-grid">
-                <FadeInSection>
-                  <LazyLoadImage src={Fluent01} alt="Fluent 01" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Fluent02} alt="Fluent 02" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Fluent03} alt="Fluent 03" effect="blur"/>
-                </FadeInSection>
-                <FadeInSection>
-                  <LazyLoadImage src={Fluent05} alt="Fluent 05" effect="blur"/>
-                </FadeInSection>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* HER */}
+      <Project
+        title="Her"
+        description="““Her” is an editorial for MUSE Magazine Issue XXVII which reinterprets women engaged in traditional domestic activities with a fantastical twist. By infusing an otherworldly aesthetic, the shoot challenges gender norms, underscoring these roles are not inherently bound to women."
+        credits={[
+          "Creative Director: Nadisha Gautam",
+          "Photographer: Cat Rose",
+          "Videographer: Bronwyn Tyndall",
+          "Make Up Artist: Khush Sagar",
+          "Model: Maya Elliot & Ying Feng",
+          "Graphic Designer: Nadisha Gautam",
+        ]}
+        images={herImages}
+      />
     </div>
   );
 };
+
+// Reusable sub-component for each editorial
+const Project = ({
+  title,
+  description,
+  credits,
+  images,
+  smallScreenImages,
+}) => (
+  <div className="project">
+    <p className="heading">{title}</p>
+    <hr className="line" />
+    <div className="row">
+      <div className="cdGrid">
+        <p>{description}</p>
+        <div className="credits-div">
+          <div className="credits">
+            {credits.map((credit, i) => (
+              <p key={i}>{credit}</p>
+            ))}
+          </div>
+        </div>
+        <div className="content">
+          <PhotoGrid images={images} smallScreenImages={smallScreenImages} />
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default CreativeDirectionContent;

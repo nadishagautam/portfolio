@@ -3,19 +3,23 @@ import { Link, useLocation } from "react-router-dom";
 import "./navBar.css";
 
 function NavBar() {
-  const name = "NADISHA GAUTAM";
-  const repeatCount = 50;
   const location = useLocation();
 
   return (
     <div className="navbar-container">
-      <Link to="/" className="scroll">
-        <div className="LeftToRight">
-          {Array.from({ length: repeatCount }).map((_, index) => (
-            <p key={index}>{name}</p>
-          ))}
-        </div>
-      </Link>
+      {/* Seamless scrolling name */}
+      <div className="scroll-container">
+        <Link to="/" className="scroll-track-link">
+          <div className="scroll-track">
+            {Array(50)
+              .fill(null)
+              .map((_, i) => (
+                <span key={i}>NADISHA GAUTAM *</span>
+              ))}
+          </div>
+        </Link>
+      </div>
+
       <nav className="navbar secondary-navbar">
         <ul className="navbar-nav">
           <li className="nav-item">

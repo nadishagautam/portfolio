@@ -91,6 +91,51 @@
   }
 }
 
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #05ff00; 
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+
+}
+.scroll-container p{
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+.scroll-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+}
+
+.scroll-track span {
+  display: inline-block;
+  padding-right: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 @media (max-width: 768px) {
   .nav-link {
     font-size: 0.75rem;

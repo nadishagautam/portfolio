@@ -2,7 +2,7 @@ import "./aboutContent.css";
 import React from "react";
 import Nadisha from "../../assets/images/AboutNadisha.gif";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutContent = () => {
   return (
@@ -19,13 +19,12 @@ const AboutContent = () => {
             <div className="about-me">
               <p>
                 {" "}
-                Nadisha is a Toronto-based Creative and Software Developer
-                currently studying Computer Science (AI specialization) and
-                Economics at Queen’s University. With a strong blend of
-                technical skills and creative vision, she excels in developing
-                innovative software solutions and leading design initiatives.
-                Nadisha is passionate about integrating technology with design
-                to create impactful and user-centric experiences.{" "}
+                Nadisha is a Toronto-based Creative and Software Developer. She
+                graduated from Queen’s University with a degree in Computer
+                Science (AI specialization) and Economics. With a unique blend
+                of technical expertise and creative vision, she thrives in
+                building innovative software solutions and leading design-driven
+                projects.{" "}
               </p>
             </div>
 
@@ -42,27 +41,25 @@ const AboutContent = () => {
               React
             </p>
             <p>
-              Developer Tools: Git, Visual Studio Code, PyCharm, Qt Creator,
-              Eclipse{" "}
+              Developer Tools: Git, Visual Studio Code, PyCharm, Qt Creator{" "}
             </p>
             <p>
               {" "}
               Design Tools: Adobe Illustrator, Adobe Photoshop, Adobe InDesign,
               Figma, Webflow, Squarespace
             </p>
-            <p>
-              Data Science & Analysis: MATLAB, Gnuplot, Machine Learning (ML)
-            </p>
           </div>
 
           <div className="column-3"></div>
 
           <div className="column-4">
-            <LazyLoadImage src={Nadisha} effect="blur"/>
+            <LazyLoadImage src={Nadisha} effect="blur" />
 
             <div className="socials">
               <a href="mailto:nadishagautam@gmail.com">EMAIL →</a>
-              <a href="https://www.linkedin.com/in/nadisha-gautam/">LINKEDIN →</a>
+              <a href="https://www.linkedin.com/in/nadisha-gautam/">
+                LINKEDIN →
+              </a>
               <a href="https://github.com/nadishagautam">GITHUB →</a>
             </div>
           </div>
