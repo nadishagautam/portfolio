@@ -10,7 +10,7 @@ const PhotoGrid = ({ images, smallScreenImages = null }) => {
 
   useEffect(() => {
     const checkSize = () => setIsSmallScreen(window.innerWidth <= 768);
-    checkSize(); // Run on mount
+    checkSize(); 
     window.addEventListener("resize", checkSize);
     return () => window.removeEventListener("resize", checkSize);
   }, []);
